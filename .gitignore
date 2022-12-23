@@ -1,0 +1,9 @@
+#turtlebot PC workspace
+turtlebot3_PC_ws/build
+turtlebot3_PC_ws/install
+turtlebot3_PC_ws/log
+
+# turtlebot robot workspace
+turtlebot3_ws/build
+turtlebot3_ws/install
+turtlebot3_ws/log
