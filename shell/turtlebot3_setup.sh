@@ -1,11 +1,11 @@
 
 ###################### variables ######################
 turtlebot3_repo_path="/home/$USER/git/lior-sc/turtlebot3_repo"
-turtlebot3_PC_ws_path="$turtlebot3_repo_path/turtlebot3_PC_ws"
+turtlebot3_ws_path="$turtlebot3_repo_path/turtlebot3_ws"
 
 
 ###################### functions ######################
-source_turtlebot3_env(){
+source_turtlebot3_PC_env(){
     source /opt/ros/foxy/setup.bash
     source $turtlebot3_ws_path/install/local_setup.bash
     cd $turtlebot3_repo_path
@@ -22,10 +22,9 @@ ssh_turtlebot(){
     ssh ubuntu@192.168.1.202
 }
 
+foxy(){
+    source /opt/ros/foxy/setup.bash
+    echo "foxy"
+}
 
-
-# foxxy(){
-#     # source /opt/ros/foxy/setup.bash
-#     # echo "foxy"
-# }
 
