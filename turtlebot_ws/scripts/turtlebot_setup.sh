@@ -81,7 +81,7 @@ function build_turtlebot_components
     cd $current_path
 }
 
-source_bashrc()
+function source_bashrc
 {
     source /home/$USER/.bashrc
     echo "source bashrc"
