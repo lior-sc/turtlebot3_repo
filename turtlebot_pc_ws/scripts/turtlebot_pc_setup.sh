@@ -17,7 +17,7 @@ function source_turtlebot3_env
     echo "source foxy"
     source /opt/ros/foxy/setup.bash
     echo "source turtlebot components"
-    source $turtlebot3_components_ws_path/install/local_setup.bash
+    source $turtlebot_components_ws_path/install/local_setup.bash
     echo "source turtlebot_pc_ws"
     source $turtlebot_pc_ws_path/install/local_setup.bash
     
