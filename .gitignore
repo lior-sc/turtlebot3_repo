@@ -1,12 +1,12 @@
 #turtlebot PC workspace
-turtlebot3_pc_ws/build
-turtlebot3_pc_ws/install
-turtlebot3_pc_ws/log
+turtlebot3_ws/build
+turtlebot3_ws/install
+turtlebot3_ws/log
 
 # turtlebot robot workspace
-turtlebot_pc_ws/build
-turtlebot_pc_ws/install
-turtlebot_pc_ws/log
+turtlebot_ws/build
+turtlebot_ws/install
+turtlebot_ws/log
 
 # turtlebot components ws
 turtlebot_components_ws

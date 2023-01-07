@@ -1,7 +1,7 @@
 
 ###################### variables ######################
 turtlebot_repo_path="/home/$USER/git/lior-sc/turtlebot3_repo"
-turtlebot_pc_ws_path="$turtlebot_repo_path/turtlebot_pc_ws"
+turtlebot_ws_path="$turtlebot_repo_path/turtlebot_ws"
 turtlebot_components_ws_path="$turtlebot_repo_path/turtlebot_components_ws"
 
 
@@ -12,18 +12,19 @@ function foxy
     echo "source foxy"
 }
 
-function source_turtlebot3_env
+function source_turtlebot_env
 {
     echo "source foxy"
     source /opt/ros/foxy/setup.bash
     echo "source turtlebot components"
     source $turtlebot_components_ws_path/install/local_setup.bash
-    echo "source turtlebot_pc_ws"
-    source $turtlebot_pc_ws_path/install/local_setup.bash
+    echo "source turtlebot_ws"
+    source $turtlebot_ws_path/install/local_setup.bash
     
     # echo "change ROS_DOMAIN and TURTLEBOT_MODEL"
     export ROS_DOMAIN_ID=30 
     export TURTLEBOT_MODEL=burger
+    export LDS_MODEL=LDS-01
     
     # echo "turtlebot3 env has been sourced"
 }
