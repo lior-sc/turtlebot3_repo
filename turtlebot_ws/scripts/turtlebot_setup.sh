@@ -43,11 +43,11 @@ function build_turtlebot_ws
     # Store present working directory
     pwd=$PWD
     #go to workspace path
-    cd $turtlebot_pc_ws_path
+    cd $turtlebot_ws_path
     # build workspace
     colcon build --symlink-install
     # source worksapce
-    source $turtlebot_pc_ws_path/install/local_setup.bash
+    source $turtlebot_ws_path/install/local_setup.bash
     # go back to previous working directory
     cd $pwd
 }
@@ -61,11 +61,11 @@ function build_turtlebot_ws_pkg
     # Store present working directory
     pwd=$PWD
     #go to workspace path
-    cd $turtlebot_pc_ws_path
+    cd $turtlebot_ws_path
     # build workspace
     colcon build --symlink-install --packages-up-to $pkg
     # source worksapce
-    source $turtlebot_pc_ws_path/install/local_setup.bash
+    source $turtlebot_ws_path/install/local_setup.bash
     # go back to previous working directory
     cd $pwd
 }
