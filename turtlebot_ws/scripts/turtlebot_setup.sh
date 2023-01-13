@@ -12,6 +12,11 @@ function foxy
     echo "source foxy"
 }
 
+function source_node_scripts
+{
+    source $turtlebot_ws_path/scripts/nodes/turtlebot3_bringup.sh
+}
+
 function source_turtlebot_env
 {
     echo "source foxy"
@@ -20,6 +25,8 @@ function source_turtlebot_env
     source $turtlebot_components_ws_path/install/local_setup.bash
     echo "source turtlebot_ws"
     source $turtlebot_ws_path/install/local_setup.bash
+
+    source_node_scripts
     
     # echo "change ROS_DOMAIN and TURTLEBOT_MODEL"
     export ROS_DOMAIN_ID=30 
@@ -88,7 +95,4 @@ function source_bashrc
     echo "source bashrc"
 }
 
-function source_node_scripts
-{
-    source $turtlebot_ws_path/scripts/nodes/turtlebot3_bringup.sh
-}
+
