@@ -87,3 +87,8 @@ function source_bashrc
     source /home/$USER/.bashrc
     echo "source bashrc"
 }
+
+function source_node_scripts
+{
+    source $turtlebot_ws_path/scripts/nodes/turtlebot3_bringup.sh
+}
