@@ -8,8 +8,8 @@ function tmux_turtlebot_bringup
 
     # clear new session and run bringup command
     tmux new-session -s turtlebot_bringup -n bringup
-    tmux send-keys -t turtlebot_run:bringup "source_turtlebot_env" C-m
-    tmux send-keys -t turtlebot_run:bringup "ros2 launch turtlebot3_bringup robot.launch.py" C-m
+    tmux send-keys -t turtlebot_run:bringup "source_turtlebot_env" "Enter"
+    tmux send-keys -t turtlebot_run:bringup "ros2 launch turtlebot3_bringup robot.launch.py" "Enter"
 }
 
 function tmux_turtlebot_rviz
@@ -27,3 +27,4 @@ function turtlebot_rviz
     source_turtlebot_env
     ros2 launch turtlebot3_bringup rviz2.launch.py
 }
+
