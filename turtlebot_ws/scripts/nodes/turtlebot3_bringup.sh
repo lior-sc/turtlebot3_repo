@@ -18,7 +18,12 @@ function tmux_turtlebot_rviz
     sleep 2
 
     # clear new session and run bringup command
-    tmux new-session -s turtlebot_rviz_tools -n rviz0
-    tmux send-keys -t turtlebot_rviz_tools:rviz0 "source_turtlebot_env" "Enter"
-    tmux send-keys -t turtlebot_rviz_tools:rviz0 "ros2 launch turtlebot3_bringup rviz2.launch.py" "Enter"
+    tmux new-session -s turtlebot_rviz_tools -n rviz0  
+    tmux send-keys -t turtlebot_rviz_tools:rviz0 "turtlebot_rviz" "Enter"
+}
+
+function turtlebot_rviz
+{
+    source_turtlebot_env
+    ros2 launch turtlebot3_bringup rviz2.launch.py
 }
