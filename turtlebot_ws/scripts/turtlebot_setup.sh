@@ -45,7 +45,7 @@ function ssh_turtlebot
 
 function build_turtlebot_ws
 {
-    source_turtlebot3_env
+    source_turtlebot_env
     echo ""
     # Store present working directory
     pwd=$PWD
@@ -63,7 +63,7 @@ function build_turtlebot_ws_pkg
 {
     pkg=$1  #package to build
 
-    source_turtlebot3_env
+    source_turtlebot_env
     echo ""
     # Store present working directory
     pwd=$PWD
@@ -79,7 +79,7 @@ function build_turtlebot_ws_pkg
 
 function build_turtlebot_components
 {
-    source_turtlebot3_env
+    source_turtlebot_env
     echo ""
     current_path=$PWD
     cd $turtlebot_components_ws_path
