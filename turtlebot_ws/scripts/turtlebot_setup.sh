@@ -30,7 +30,7 @@ function source_turtlebot_env
     
     # echo "change ROS_DOMAIN and TURTLEBOT_MODEL"
     export ROS_DOMAIN_ID=30 
-    export TURTLEBOT_MODEL=burger
+    export TURTLEBOT3_MODEL=burger
     export LDS_MODEL=LDS-01
     
     # echo "turtlebot3 env has been sourced"

@@ -28,3 +28,9 @@ function turtlebot_rviz
     ros2 launch turtlebot3_bringup rviz2.launch.py
 }
 
+function turtlebot_bringup
+{
+    source_turtlebot_env
+    ros2 launch turtlebot3_bringup robot.launch.py
+}
+
