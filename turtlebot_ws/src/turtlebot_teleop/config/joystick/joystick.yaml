@@ -1,0 +1,13 @@
+# https://index.ros.org/p/joy/
+rsys_servo_joystick_node:
+  ros__parameters:
+    # device_id: 1
+    device_name: "Sony PLAYSTATION(R)3 Controller"
+    deadzone: 0.05
+    autorepeat_rate: 20.0
+    sticky_buttons: false
+    coalesce_interval_ms: 1
+
+#0 : Logitech Logitech RumblePad 2 USB
+#1 : Logitech Logitech Cordless RumblePad 2
+#2 : Logitech Logitech RumblePad 2 USB
