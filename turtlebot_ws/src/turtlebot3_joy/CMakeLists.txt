@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(turtlebot_teleop)
+project(turtlebot3_joy)
 
 # Default to C99
 if(NOT CMAKE_C_STANDARD)

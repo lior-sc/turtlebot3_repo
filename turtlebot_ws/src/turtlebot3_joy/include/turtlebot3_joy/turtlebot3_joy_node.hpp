@@ -1,5 +1,5 @@
-#ifndef TURTLEBOT_TELEOP_NODE_HPP
-#define TURTLEBOT_TELEOP_NODE_HPP
+#ifndef TURTLEBOT3_JOY_NODE_HPP
+#define TURTLEBOT3_JOY_NODE_HPP
 
 #include <vector>
 #include <rclcpp/rclcpp.hpp>
@@ -10,11 +10,11 @@ namespace liors_turtle
 {
     namespace turtlebot3
     {
-        class TurtlebotTeleopNode : public rclcpp::Node
+        class JoyTeleopNode : public rclcpp::Node
         {
         public:
-            TurtlebotTeleopNode(/* args */);
-            ~TurtlebotTeleopNode();
+            JoyTeleopNode(/* args */);
+            ~JoyTeleopNode();
 
             bool init();
 
@@ -39,10 +39,10 @@ namespace liors_turtle
             rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr twist_pub_;
 
             // Timers
-            rclcpp::TimerBase::SharedPtr twist_pub_timer_;
+            // rclcpp::TimerBase::SharedPtr twist_pub_timer_;
 
             // Timer callbacks
-            void twist_pub_cb();
+            // void twist_pub_cb();
 
             // Subscriber callbacks
             void joy_sub_cb_(const sensor_msgs::msg::Joy::SharedPtr msg);
