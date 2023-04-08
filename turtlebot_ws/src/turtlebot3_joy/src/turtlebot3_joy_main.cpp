@@ -5,7 +5,7 @@ int main(int argc, char *argv[])
 {
     rclcpp::init(argc, argv);
 
-    auto turtlebot_joy_node = std::make_shared<liors_turtle::turtlebot3::JoyNode>();
+    auto turtlebot_joy_node = std::make_shared<liors_turtle::turtlebot3::JoyTeleopNode>();
 
     turtlebot_joy_node->init();
 

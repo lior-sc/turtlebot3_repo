@@ -30,7 +30,7 @@ namespace liors_turtle
             // Methods
             inline void declare_node_parameters();
             inline void update_parameters_from_config();
-            bool convert_joy_to_vin(sensor_msgs::msg::Joy joy_msg, geometry_msgs::msg::Twist twist_value);
+            bool convert_joy_to_vin(sensor_msgs::msg::Joy joy_msg, geometry_msgs::msg::Twist &twist_value);
 
             // Subscribers
             rclcpp::Subscription<sensor_msgs::msg::Joy>::SharedPtr joy_sub_;

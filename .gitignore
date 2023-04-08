@@ -11,3 +11,6 @@ turtlebot_components_ws
 
 # vscode config files
 .vscode
+
+# repository build directory
+build

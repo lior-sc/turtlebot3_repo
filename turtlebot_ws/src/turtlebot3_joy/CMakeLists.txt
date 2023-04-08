@@ -18,6 +18,37 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
+find_package(sensor_msgs REQUIRED)
+find_package(geometry_msgs REQUIRED)
+
+set(dependencies
+    rclcpp
+    sensor_msgs
+    geometry_msgs
+ )
+
+ include_directories(include)
+
+ add_library(${PROJECT_NAME} SHARED
+    src/turtlebot3_joy/turtlebot3_joy_node.cpp
+  )
+ ament_target_dependencies(${PROJECT_NAME} ${dependencies})
+
+# joy_teleop executable 
+ add_executable(joy_teleop src/turtlebot3_joy_main.cpp)
+ ament_target_dependencies(joy_teleop ${dependencies})
+ target_link_libraries(joy_teleop ${PROJECT_NAME})
+
+ install(TARGETS ${PROJECT_NAME}
+  joy_teleop
+  ARCHIVE DESTINATION lib
+  LIBRARY DESTINATION lib
+  RUNTIME DESTINATION lib/${PROJECT_NAME}
+ )
+
+ install(DIRECTORY launch DESTINATION share/${PROJECT_NAME})
+
+
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)

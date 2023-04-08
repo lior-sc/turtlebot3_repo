@@ -53,12 +53,14 @@ bool JoyTeleopNode::init()
     // initialize timers
     // twist_pub_timer_ = this->create_wall_timer(20ms, std::bind(&JoyTeleopNode::twist_pub_cb, this));
     update_parameters_from_config();
+    return true;
 }
 
-bool JoyTeleopNode::convert_joy_to_vin(sensor_msgs::msg::Joy joy_msg, geometry_msgs::msg::Twist twist_value)
+bool JoyTeleopNode::convert_joy_to_vin(sensor_msgs::msg::Joy joy_msg, geometry_msgs::msg::Twist &twist_value)
 {
     twist_value.linear.x = joy_msg.axes[joystick_lin_x_axis_] * turtlebot_max_lin_vel;
     twist_value.angular.z = joy_msg.axes[joystick_ang_z_axis_] * turtlebot_max_ang_vel;
+    return true;
 }
 
 void JoyTeleopNode::joy_sub_cb_(const sensor_msgs::msg::Joy::SharedPtr msg)
