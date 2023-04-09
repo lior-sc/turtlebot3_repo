@@ -46,7 +46,10 @@ set(dependencies
   RUNTIME DESTINATION lib/${PROJECT_NAME}
  )
 
- install(DIRECTORY launch DESTINATION share/${PROJECT_NAME})
+#  Install launch directory in share/${project_name} so that we can use the files when we source the project
+ install(DIRECTORY 
+    launch 
+    DESTINATION share/${PROJECT_NAME})
 
 
 
