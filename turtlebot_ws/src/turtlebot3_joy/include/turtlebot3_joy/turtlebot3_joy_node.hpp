@@ -20,17 +20,25 @@ namespace liors_turtle
 
         private:
             // variables
-            int joystick_lin_x_axis_;
-            int joystick_ang_z_axis_;
-            float turtlebot_max_lin_vel;
-            float turtlebot_max_ang_vel;
+            int publish_frequency_;
+            int joy_linear_x_axis_;
+            int joy_angular_z_axis_;
+            int enable_button_;
+            double max_linear_velocity_;
+            double max_angular_velocity_;
+            double linear_acceleration_;
+            double angular_acceleration_;
+
+            geometry_msgs::msg::Twist current_velocity_;
+            geometry_msgs::msg::Twist target_velocity_;
+            bool armed_;
 
             // Members
 
             // Methods
-            inline void declare_node_parameters();
-            inline void update_parameters_from_config();
-            bool convert_joy_to_vin(sensor_msgs::msg::Joy joy_msg, geometry_msgs::msg::Twist &twist_value);
+            bool convert_joy_to_vin(sensor_msgs::msg::Joy joy_msg);
+            void update_current_velocity();
+            void set_twist_publisher_state(int);
 
             // Subscribers
             rclcpp::Subscription<sensor_msgs::msg::Joy>::SharedPtr joy_sub_;
@@ -39,10 +47,10 @@ namespace liors_turtle
             rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr twist_pub_;
 
             // Timers
-            // rclcpp::TimerBase::SharedPtr twist_pub_timer_;
+            rclcpp::TimerBase::SharedPtr twist_pub_timer_;
 
             // Timer callbacks
-            // void twist_pub_cb();
+            void twist_pub_cb();
 
             // Subscriber callbacks
             void joy_sub_cb_(const sensor_msgs::msg::Joy::SharedPtr msg);
