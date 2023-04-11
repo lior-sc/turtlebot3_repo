@@ -53,7 +53,7 @@ namespace liors_turtle
             void twist_pub_cb();
 
             // Subscriber callbacks
-            void joy_sub_cb_(const sensor_msgs::msg::Joy::SharedPtr msg);
+            void joy_sub_cb(const sensor_msgs::msg::Joy::SharedPtr msg);
 
             /* data */
         };
