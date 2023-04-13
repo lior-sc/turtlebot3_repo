@@ -20,10 +20,11 @@ namespace liors_turtle
 
         private:
             // variables
+            bool always_armed_;
+            int arm_button_;
             int publish_frequency_;
             int joy_linear_x_axis_;
             int joy_angular_z_axis_;
-            int enable_button_;
             double max_linear_velocity_;
             double max_angular_velocity_;
             double linear_acceleration_;
