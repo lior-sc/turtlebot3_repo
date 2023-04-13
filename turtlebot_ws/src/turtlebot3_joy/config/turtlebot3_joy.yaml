@@ -1,0 +1,17 @@
+turtlebot3_joy_node:
+  ros__parameters:
+
+    # joystick axes definitions
+    joy_linear_x_axis: 1
+    joy_angular_z_axis: 0
+
+    # joystick button definitions
+    arm_button: 0
+
+    # turtlebot configurations
+    always_armed: true
+    max_linear_velocity: 0.22     # m/s
+    max_angular_velocity: 2.84    # rad/s
+    linear_acceleration: 0.5      # m/s^2
+    angular_acceleration: 8       # rad/s^2
+    publish_frequency: 20         # Hz
