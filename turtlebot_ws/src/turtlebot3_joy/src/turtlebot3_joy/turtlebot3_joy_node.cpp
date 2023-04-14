@@ -124,17 +124,20 @@ void JoyTeleopNode::update_current_velocity()
 
     for (int i = 0; i < 2; i++)
     {
-        if (abs(velocity_diff[i]) > delta_v[i])
+        double temp_delta_v = acc[i] * dt;
+
+        if (abs(velocity_diff[i]) > temp_delta_v)
         {
             if (std::signbit(velocity_diff[i]))
             {
 
                 // this means that the velocity difference is negative
-                delta_v[i] = -acc[i] * dt;
+                delta_v[i] = -temp_delta_v;
             }
             else
             {
-                delta_v[i] = acc[i] * dt;
+
+                delta_v[i] = temp_delta_v;
             }
         }
         else
