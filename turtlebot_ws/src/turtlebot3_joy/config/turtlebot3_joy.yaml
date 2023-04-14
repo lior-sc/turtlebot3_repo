@@ -16,7 +16,7 @@ turtlebot_joy_teleop_node:  # Needs to be named after the node name. (The name i
     max_linear_velocity: 0.22     # m/s
     max_angular_velocity: 2.84    # rad/s
     linear_acceleration: 0.5      # m/s^2
-    angular_acceleration: 8.0       # rad/s^2
+    angular_acceleration: 6.0       # rad/s^2
     publish_frequency: 20         # Hz
 
 
