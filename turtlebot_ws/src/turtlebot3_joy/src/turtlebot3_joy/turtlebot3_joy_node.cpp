@@ -5,7 +5,7 @@
 using namespace liors_turtle::turtlebot3;
 using namespace std::chrono_literals;
 
-JoyTeleopNode::JoyTeleopNode() : Node("turtlebot_teleop_node"),
+JoyTeleopNode::JoyTeleopNode() : Node("turtlebot_joy_teleop_node"),
                                  armed_(false)
 {
     // declare variables
@@ -31,7 +31,7 @@ JoyTeleopNode::JoyTeleopNode() : Node("turtlebot_teleop_node"),
 
 JoyTeleopNode::~JoyTeleopNode()
 {
-    RCLCPP_INFO(this->get_logger(), "turtlebot_teleop_node is closing. zero velocity command will be sent!");
+    RCLCPP_INFO(this->get_logger(), "turtlebot_joy_teleop_node is closing. zero velocity command will be sent!");
     geometry_msgs::msg::Vector3 zero_vel;
     zero_vel.x = 0;
     zero_vel.y = 0;

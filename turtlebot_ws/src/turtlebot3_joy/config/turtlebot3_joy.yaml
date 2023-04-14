@@ -1,5 +1,8 @@
-turtlebot_teleop_node:
-  ros__parameters:
+turtlebot_joy_teleop_node:  # Needs to be named after the node name. (The name is determined during node construction. Node name can be changed in launch file)
+  ros__parameters:          # Needs to appear in the yaml file. this is standard ROS syntax
+
+    # NOTES:
+    # 1. 
 
     # joystick axes definitions
     joy_linear_x_axis: 1
@@ -15,3 +18,15 @@ turtlebot_teleop_node:
     linear_acceleration: 0.5      # m/s^2
     angular_acceleration: 8.0       # rad/s^2
     publish_frequency: 20         # Hz
+
+
+
+
+###################################### NOTES ###################################### 
+
+# 1.   We can use 1 yaml file for several nodes by duplicatung the above standard structure and changing the node name. 
+#     here is an example:
+#     <Other_node_name>:
+#       ros__parameters:
+#         < variables>
+#         ...
